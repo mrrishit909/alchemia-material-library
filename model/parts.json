@@ -1,0 +1,68 @@
+{
+  "_doc": "Asset contract for the ALCHEMIA specimen and test-rig kit. Blender is Z-up, the GLB is Y-up (glTF z = -Blender y). The machine faces +z in the browser. 1 unit is about 10 cm. Every browser-controlled part has a stable name and a pivot at its hinge, axis or centre. Coupon_Gauge is a dense smooth cylinder (48 rings, 24 sides) so a vertex shader can stretch, neck and break it; Bar_Ceramic is a dense bar (64 segments) so it can bend. Proxy_Machine is the analysis volume and is never drawn.",
+  "machine": {
+    "columnHeight": 4.4,
+    "lowerGripY": 0.975,
+    "upperGripY": 3.325,
+    "crossheadRestY": 3.7,
+    "travel": 0.9
+  },
+  "coupon": {
+    "center": [
+      0,
+      2.15,
+      0
+    ],
+    "gaugeLength": 1.0,
+    "gaugeRadius": 0.12,
+    "rings": 48,
+    "sides": 24
+  },
+  "bar": {
+    "length": 3.0,
+    "width": 0.3,
+    "height": 0.3,
+    "segments": 64
+  },
+  "groups": {
+    "machine": [
+      "Machine_Base",
+      "Machine_Column_L",
+      "Machine_Column_R",
+      "Machine_Crosshead",
+      "Machine_Actuator",
+      "Machine_LoadCell",
+      "Machine_GripUpper",
+      "Machine_GripLower",
+      "Machine_Display",
+      "Machine_Dial",
+      "Machine_Needle"
+    ],
+    "rigs": [
+      "Rig_Anvil_L",
+      "Rig_Anvil_R",
+      "Rig_Nose",
+      "Pendulum_Stand",
+      "Pendulum_Arm",
+      "Pendulum_Head"
+    ],
+    "specimens": [
+      "Coupon_Grip_Top",
+      "Coupon_Gauge",
+      "Coupon_Grip_Bottom",
+      "Lattice_Block",
+      "Bar_Ceramic"
+    ],
+    "panel": {
+      "prefix": "Panel_Ply_",
+      "count": 6
+    },
+    "proxy": [
+      "Proxy_Machine"
+    ]
+  },
+  "budget": {
+    "tris": 40000,
+    "bytes": 500000
+  }
+}
